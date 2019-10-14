@@ -35,6 +35,7 @@ class HRMViewController: UIViewController {
   @IBOutlet weak var heartRateLabel: UILabel!
   @IBOutlet weak var bodySensorLocationLabel: UILabel!
     var centralManager: CBCentralManager!
+    var medidorPresion: CBPeripheral!
   override func viewDidLoad() {
     super.viewDidLoad()
     centralManager = CBCentralManager(delegate: self, queue: nil)
@@ -68,6 +69,16 @@ extension HRMViewController: CBCentralManagerDelegate{
     }
   }
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
-        print(peripheral.name)
+        medidorPresion = peripheral
+        centralManager.connect(medidorPresion)
+        centralManager.stopScan()
+        
+    }
+    
+    func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
+        let alert = UIAlertController(title: "Conectado", message: "Se conecto al dispositivo: \(peripheral.name)", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
 }
