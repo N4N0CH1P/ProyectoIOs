@@ -14,6 +14,12 @@
 		064EB69923548CEF00788BB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 064EB69823548CEF00788BB6 /* Assets.xcassets */; };
 		064EB69C23548CEF00788BB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 064EB69A23548CEF00788BB6 /* LaunchScreen.storyboard */; };
 		064EB6A423549F6B00788BB6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 064EB6A323549F6B00788BB6 /* GoogleService-Info.plist */; };
+		065A58A2237068E800EB1E6A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065A58A1237068E800EB1E6A /* SignUpViewController.swift */; };
+		065A58A42370696A00EB1E6A /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065A58A32370696A00EB1E6A /* FirebaseAuthManager.swift */; };
+		065A58A623706B2E00EB1E6A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065A58A523706B2E00EB1E6A /* LoginViewController.swift */; };
+		065A58A823706D4800EB1E6A /* PatientsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065A58A723706D4800EB1E6A /* PatientsTableViewController.swift */; };
+		066A0F1623622E07001F5E52 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066A0F1523622E06001F5E52 /* TableViewController.swift */; };
+		066A0F1823622EC8001F5E52 /* Paciente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066A0F1723622EC8001F5E52 /* Paciente.swift */; };
 		E0C0EBB7DA5D8AF14E636399 /* Pods_HeartRate_DBTest01.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB21131D47B11B51008F768 /* Pods_HeartRate_DBTest01.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +33,12 @@
 		064EB69B23548CEF00788BB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		064EB69D23548CEF00788BB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		064EB6A323549F6B00788BB6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		065A58A1237068E800EB1E6A /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		065A58A32370696A00EB1E6A /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
+		065A58A523706B2E00EB1E6A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		065A58A723706D4800EB1E6A /* PatientsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientsTableViewController.swift; sourceTree = "<group>"; };
+		066A0F1523622E06001F5E52 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		066A0F1723622EC8001F5E52 /* Paciente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paciente.swift; sourceTree = "<group>"; };
 		1AB21131D47B11B51008F768 /* Pods_HeartRate_DBTest01.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeartRate_DBTest01.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6860BD8D0782B234220C2B2C /* Pods-HeartRate_DBTest01.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeartRate_DBTest01.release.xcconfig"; path = "Target Support Files/Pods-HeartRate_DBTest01/Pods-HeartRate_DBTest01.release.xcconfig"; sourceTree = "<group>"; };
 		80F4B0F65932B13F708CFC64 /* Pods-HeartRate_DBTest01.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeartRate_DBTest01.debug.xcconfig"; path = "Target Support Files/Pods-HeartRate_DBTest01/Pods-HeartRate_DBTest01.debug.xcconfig"; sourceTree = "<group>"; };
@@ -65,12 +77,18 @@
 		064EB68E23548CEE00788BB6 /* HeartRate_DBTest01 */ = {
 			isa = PBXGroup;
 			children = (
+				065A58A32370696A00EB1E6A /* FirebaseAuthManager.swift */,
+				065A58A1237068E800EB1E6A /* SignUpViewController.swift */,
 				064EB68F23548CEE00788BB6 /* AppDelegate.swift */,
 				064EB69123548CEE00788BB6 /* SceneDelegate.swift */,
 				064EB69323548CEE00788BB6 /* ViewController.swift */,
+				066A0F1523622E06001F5E52 /* TableViewController.swift */,
 				064EB6A323549F6B00788BB6 /* GoogleService-Info.plist */,
 				064EB69523548CEE00788BB6 /* Main.storyboard */,
+				065A58A723706D4800EB1E6A /* PatientsTableViewController.swift */,
+				065A58A523706B2E00EB1E6A /* LoginViewController.swift */,
 				064EB69823548CEF00788BB6 /* Assets.xcassets */,
+				066A0F1723622EC8001F5E52 /* Paciente.swift */,
 				064EB69A23548CEF00788BB6 /* LaunchScreen.storyboard */,
 				064EB69D23548CEF00788BB6 /* Info.plist */,
 			);
@@ -229,9 +247,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				065A58A2237068E800EB1E6A /* SignUpViewController.swift in Sources */,
+				065A58A42370696A00EB1E6A /* FirebaseAuthManager.swift in Sources */,
+				066A0F1823622EC8001F5E52 /* Paciente.swift in Sources */,
 				064EB69423548CEE00788BB6 /* ViewController.swift in Sources */,
+				065A58A623706B2E00EB1E6A /* LoginViewController.swift in Sources */,
 				064EB69023548CEE00788BB6 /* AppDelegate.swift in Sources */,
+				065A58A823706D4800EB1E6A /* PatientsTableViewController.swift in Sources */,
 				064EB69223548CEE00788BB6 /* SceneDelegate.swift in Sources */,
+				066A0F1623622E07001F5E52 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,17 +9,21 @@
 import UIKit
 import FirebaseCore
 import FirebaseFirestore
+import FirebaseAuth
 
 class ViewController: UIViewController {
     
     var db: Firestore!
+    
+    
+    
     @IBOutlet weak var tbNom: UITextField!
     @IBOutlet weak var tbApellidos: UITextField!
     @IBOutlet weak var tbGender: UITextField!
     
     @IBOutlet weak var tbPeso: UITextField!
     @IBOutlet weak var tbAltura: UITextField!
-    
+    let userID = Auth.auth().currentUser!.uid
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +31,7 @@ class ViewController: UIViewController {
 
         Firestore.firestore().settings = settings
         db = Firestore.firestore()
+        
         
     }
     
@@ -38,7 +43,8 @@ class ViewController: UIViewController {
                                                             "estatura": height,
                                                             "genero": gender,
                                                             "nombre": name,
-                                                            "peso": weight]) {
+                                                            "peso": weight,
+                                                            "doctor": self.userID]) {
                                                                 err in
                                                                 if let err = err {
                                                                     print("Error al subir el documento: \(err)")
@@ -50,6 +56,8 @@ class ViewController: UIViewController {
     }
     
     private func displayRecords() {
+        
+        
         db.collection("pacientes").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error al obtener datos -> : \(err)")
@@ -57,6 +65,8 @@ class ViewController: UIViewController {
                 for document in querySnapshot!.documents {
                     print("\(document.documentID) => \(document.data())")
                 }
+                
+                print("/-------------/ \n"); 
             }
         }
     }
@@ -74,6 +84,17 @@ class ViewController: UIViewController {
         let weight = Int(tbPeso.text!)! * 1000
         
        saveRecords(name: nom, height: height, gender: gen, lastName: surname, weight: weight)
+    }
+    
+    
+    func createUser(email: String, password: String, _ callback: ((Error?) -> ())? = nil){
+          Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
+              if let e = error{
+                  callback?(e)
+                  return
+              }
+              callback?(nil)
+          }
     }
     
     
