@@ -30,6 +30,8 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+    let userID = Auth.auth().currentUser!.uid
         let settings = FirestoreSettings()
 
              Firestore.firestore().settings = settings
